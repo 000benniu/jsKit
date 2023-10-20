@@ -3,11 +3,11 @@ export class Hello {
       this.name = name;
     }
   
-    greet() {
-      console.log(`こんにちは, ${this.name}さん!`);
+    greet(param) {
+      console.log(`こんにちは, ${this.name}さん!${param}`);
     }
   }
 
-  export function HelloFunction() {
-    console.log('関数のサンプルです。');
+  export function HelloFunction(param) {
+    console.log('関数のサンプルです。' + param);
   }

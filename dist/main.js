@@ -26,7 +26,7 @@ return /******/ (() => { // webpackBootstrap
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Hello: () => (/* binding */ Hello),\n/* harmony export */   HelloFunction: () => (/* binding */ HelloFunction)\n/* harmony export */ });\nclass Hello {\n    constructor(name) {\n      this.name = name;\n    }\n  \n    greet() {\n      console.log(`こんにちは, ${this.name}さん!`);\n    }\n  }\n\n  function HelloFunction() {\n    console.log('関数のサンプルです。');\n  }\n\n//# sourceURL=webpack://jsKit/./src/hello.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Hello: () => (/* binding */ Hello),\n/* harmony export */   HelloFunction: () => (/* binding */ HelloFunction)\n/* harmony export */ });\nclass Hello {\n    constructor(name) {\n      this.name = name;\n    }\n  \n    greet(param) {\n      console.log(`こんにちは, ${this.name}さん!${param}`);\n    }\n  }\n\n  function HelloFunction(param) {\n    console.log('関数のサンプルです。' + param);\n  }\n\n//# sourceURL=webpack://jsKit/./src/hello.js?");
 
 /***/ }),
 
@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hello__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hello */ \"./src/hello.js\");\n\n\nnew _hello__WEBPACK_IMPORTED_MODULE_0__.Hello(\"テスト　タロ\").greet();\n(0,_hello__WEBPACK_IMPORTED_MODULE_0__.HelloFunction)();\n\nwindow.jskit_global_function = () => {\n    console.log('グローバル関数です。');\n}\n\n\n//# sourceURL=webpack://jsKit/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hello__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hello */ \"./src/hello.js\");\n\n\nnew _hello__WEBPACK_IMPORTED_MODULE_0__.Hello(\"テスト　タロ\").greet(\"元気ですか？\");\n(0,_hello__WEBPACK_IMPORTED_MODULE_0__.HelloFunction)(\"挨拶が大事です。\");\n\nwindow.jskit_global_function = (param) => {\n    console.log(\"グローバル関数です。\" + param);\n}\n\n\n//# sourceURL=webpack://jsKit/./src/index.js?");
 
 /***/ })
 
